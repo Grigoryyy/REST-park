@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ответ</title>
+</head>
+<body>
+    <h1>Введите ваш ответ:</h1>
+    <form action="/" method="POST">
+        <input type="text" name="user_input">
+        <input type="submit" value="Отправить">
+    </form>
+    {% if answer %}
+        <h2>{{ answer }}</h2>
+    {% endif %}
+</body>
+</html>

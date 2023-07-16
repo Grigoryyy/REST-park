@@ -6,6 +6,15 @@
 <body>
     <h1>Parking</h1>
     <form action="/park" method="POST">
+        <label>Легковая
+            <input type="radio" id="vehicle_type" name="vehicle_type" value="Легковая" checked="checked">
+        </label>
+        <label>Грузовая
+            <input type="radio" id="vehicle_type" name="vehicle_type" value="Грузовая">
+        </label>
+
+        <br><br>
+
         <label for="car_number">Номер машины для въезда:</label>
         <input type="text" id="car_number" name="car_number" required><br><br>
         <label for="hours">Час прибытия (24 формат):</label>

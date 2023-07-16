@@ -4,13 +4,23 @@
     <title>Parking</title>
 </head>
 <body>
-    <h1>Введите номер вашей машины:</h1>
-    <form action="/" method="POST">
-        <input type="text" name="user_input">
-        <input type="submit" value="Отправить">
+    <h1>Parking</h1>
+    <form action="/park" method="POST">
+        <label for="car_number">Номер машины для въезда:</label>
+        <input type="text" id="car_number" name="car_number" required><br><br>
+        <label for="hours">Час прибытия (24 формат):</label>
+        <input type="number" id="hours" name="hours" required><br><br>
+        <input type="submit" value="Park">
     </form>
-    {% if answer %}
-        <h2>{{ answer }}</h2>
-    {% endif %}
+
+    <br>
+
+    <form action="/unpark" method="POST">
+        <label for="car_number">Номер машины для выезда:</label>
+        <input type="text" id="car_number" name="car_number" required><br><br>
+        <label for="hours">Количество часов на парковке:</label>
+        <input type="number" id="hours" name="hours" required><br><br>
+        <input type="submit" value="Unpark">
+    </form>
 </body>
 </html>
